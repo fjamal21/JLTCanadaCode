@@ -1,0 +1,403 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    line-height: 100% !important;
+}
+body {
+    text-align: left;
+}
+img {
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: #007BC3 !important;
+}
+a:hover {
+    text-decoration: none;
+    color: #0A2F73 !important;
+}
+input[type='text'], input[type='password'], textarea {
+    padding: 3px;
+}
+select, input[type='text'], input[type='password'], textarea {
+    border: 1px solid #CCC !important;
+    background-color: #FFF;
+}
+select {
+    padding: 2px 2px 2px 0;
+}
+select.short {
+    width: auto;
+}
+select.ultra-short {
+    width: auto;
+}
+select.ultra-middle {
+    width: auto;
+}
+select.middle {
+    width: auto;
+}
+select.extra-middle {
+    width: auto;
+}
+select.large {
+    width: auto;
+}
+select.auto {
+    width: auto;
+}
+input[type='text'] {
+    width: auto;
+}
+input[type='text'].short {
+    width: auto;
+}
+input[type='text'].ultra-short {
+    width: auto;
+}
+input[type='text'].large {
+    width: auto;
+}
+h1 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: normal;
+}
+h2 {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: normal;
+}
+h3 {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: normal;
+}
+.micro h3 {
+    font-size: 19px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* =============================================================== 
+    DROPDOWN
+=============================================================== */
+/* Header Dropdown */
+.header.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+.header.dropdown select {
+    display: inline-block;
+    border: 1px solid #B3B3B3;
+    padding: 5px 12px 3px 4px;
+    padding-bottom: 5px\9; /* Only for IE */
+    margin: 0;
+    font: inherit;
+    outline: none;
+    line-height: 30px;
+    background: url(img/select-bg.png);
+    -webkit-appearance: none;
+    /*position: relative;*/
+    top: 0;
+    left: 0;
+    width: auto;
+    cursor: pointer;
+    height: 30px;
+    font-size: inherit;
+    color: inherit;
+    z-index: 0;
+}
+.header.dropdown:after {
+    content: url('img/dropdown-body-arrow.png');
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 1px;
+    width: 18px;
+    pointer-events: none;
+    padding: 1px 14px 0 0 !important;
+    z-index: 100001;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Only for Chrome */
+    .header.dropdown select {
+        padding-top: 0px !important;
+        padding-right: 30px !important;
+        line-height: 18px !important;
+    }
+}
+.body-header .header.dropdown:after {
+    padding: 0 13px 0 0;
+}
+
+
+.body-header .header.dropdown select {
+    height: 22px;
+    line-height: 21px !important;
+    padding: 2px 15px 3px 2px;
+}
+
+
+
+
+
+
+
+
+
+/* ===============================================================
+    TABS
+=============================================================== */
+/* Common to parent and child */
+.default.tabs {
+    display: block;
+    min-width: 450px;
+}
+.default.tabs .inner .container {
+    padding: 10px 20px 20px;
+    display: none;
+    width: auto;
+    overflow: inherit;
+    min-width: 450px;
+}
+
+#mainTabs {
+    padding: 29px 20px 0px;
+}
+.default.tabs .inner {
+    overflow: inherit;
+    margin-top: -2px;
+}
+.default.tabs .inner .active {
+    display: block;
+    color: inherit;
+}
+/* Parent tabs */
+.default.tabs ul.parent:first-child {
+    margin: 0px;
+    padding: 0px;
+    padding: 0px 20px;
+}
+.default.tabs ul.parent:first-child div:hover {
+    cursor: pointer;
+    margin-left: -1px;
+}
+.default.tabs ul.parent:first-child li.parent {
+    cursor: pointer;
+    padding: 13px 14px 15px 14px;
+    list-style-type: none;
+    display: inline-block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.default.tabs ul.parent:first-child li.parent.active {
+    padding-bottom: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: inherit;
+    border: 1px solid #CCC;
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+/* Child tabs */
+.default.tabs .child.tabs .inner .active {
+    color: inherit;
+}
+.default.tabs .child.tabs .inner {
+    border: 0;
+    overflow: hidden;
+}
+.default.tabs ul.child:first-child {
+    margin: 0px 20px 2px 0;
+    padding: 0;
+    width: auto;
+}
+.default.tabs ul.child:first-child div:hover {
+    cursor: pointer;
+    margin-left: -1px;
+}
+.default.tabs ul.child:first-child li.child {
+    padding: 14px 0;
+    list-style-type: none;
+    display: table-cell;
+    color: #182e5b;
+    font-size: 16px;
+    min-width: 160px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.default.tabs ul.child:first-child li.child.active {
+    background: url(img/tabs-arrow.png) no-repeat bottom center;
+    padding-top: 14px;
+    padding-bottom: 15px;
+    border: 0;
+}
+.default.tabs ul.child:first-child li.child span {
+    color: inherit;
+    font-size: 16px !important;
+}
+/* ===============================================================
+    HEADER POPUP MENU
+=============================================================== */
+.header-menu {
+    display: inline;
+    margin-right: 10px;
+}
+.header-menu, .header-sub-menu {
+    padding: 0;
+    position: relative;
+    color: inherit !important;
+}
+.header-menu li, .header-sub-menu li {
+    list-style-type: none;
+    display: inline-block;
+}
+.header-menu ul a {
+    width: auto;
+    cursor: default;
+    color: inherit;
+}
+.header-menu li a, .header-sub-menu li a {
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block !important;
+}
+.header-menu .label a {
+    display: inline;
+}
+.header-menu li {
+    position: relative;
+}
+.header-menu .popup-arrow {
+    width: auto;
+    height: auto;
+    position: absolute;
+}
+.header-menu .icon {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 5px;
+}
+
+
+.header-support-menu li a {
+    padding-left: 10px;
+    cursor: pointer;
+    color: #565656 !important;
+}
+
+.header-support-menu li .tutorial {
+    background: url('img/icon-tutorial.png') no-repeat left center;
+}
+
+.header-support-menu li .workbook {
+    background: url('img/icon-workbook.png') no-repeat left center;
+}
+
+.header-support-menu li .glossary {
+    background: url('img/icon-glossary.png') no-repeat left center;
+}
+
+.header-support-menu li .faq {
+    background: url('img/icon-faq.png') no-repeat left center;
+}
+
+.header-sub-menu {
+    position: absolute;
+    top: 28px;
+    top: 27px\9; /* Only for IE */
+    border: 1px solid #bfbebe !important;
+    background: #FFF;
+    -webkit-box-shadow: 3px 3px 5px #9B9B9B;
+    -moz-box-shadow: 3px 3px 5px #9B9B9B;
+    box-shadow: 3px 3px 5px #9B9B9B;
+    padding: 3px 10px;
+    min-height: 100px !important;
+    width: auto;
+    left: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Only for Chrome */
+    .header-sub-menu {
+        top: 27px;
+    }
+}
+.header-sub-menu li {
+    float: left;
+    padding: 10px 0;
+    text-align: left;
+    width: auto;
+}
+.header-sub-menu li a {
+    border: none;
+    width: auto;
+    padding: 7px 10px 7px 30px;
+    text-align: left;
+}
+.header-sub-menu .item-click {
+    cursor: pointer;
+}
+.header-sub-menu .item {
+    position: relative;
+    margin-left: 30px;
+    display: inline-block;
+    color: inherit;
+}
+.header-sub-menu.open {
+    display: block;
+}
+.header-sub-menu .popup-arrow {
+    width: auto;
+    height: auto;
+    position: absolute;
+    margin-top: -17px;
+    left: 46%;
+}
+.popup-header {
+    width: 0 !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+#headerPopupContainer {
+    display: none;
+    color: inherit;
+}
+.header-logo {
+    height: inherit;
+}
+
+@-moz-document url-prefix() {
+    .menu .header .dropdown {
+       content:'' !important;
+    }
+    .body-header .header.dropdown::after{
+	content:'' !important;
+}
+}

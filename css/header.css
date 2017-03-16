@@ -1,0 +1,179 @@
+.body-header .arrow-menu {
+    height: 13px;
+    padding: 0 13px 0 3px;
+    position: relative;
+    width: auto;
+}
+.body-header {
+    height: 110px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+
+.body-header .menu {
+    position: absolute;
+    color: inherit;
+    right: 50px;
+    top: 6px;
+    z-index: 9;
+}
+
+
+
+.body-header .section-one {
+    text-align: right;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Only for Chrome */
+    .body-header .section-one {
+        min-width: 320px;
+    }
+}
+.body-header .section-one, .body-header .section-two {
+    color: inherit;
+    height: inherit;
+    display: inline;
+}
+.body-header .section-two {
+    padding-left: 20px;
+}
+.body-header .left {
+    float: left;
+    min-width: 150px
+}
+.body-header .right {
+    float: right;
+    width: auto;
+    position: absolute !important;
+    right: 20px;
+    padding-left: 210px;
+    padding-left: 240px\9; /* Only for IE */
+    height: 76px !important;
+    bottom: 0;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Only for Chrome */
+    .body-header .section-one, .body-header .middle.row {
+        float: inherit;
+    }
+}
+.body-header .left, .body-header .right {
+    height: inherit;
+    display: table;
+    position: relative;
+}
+.body-header .middle.cell {
+    position: relative;
+    color: inherit;
+}
+.body-header .left .middle.cell {
+    top: 35px;
+}
+.body-header .right .middle.row {
+    background: #FFF;
+    margin-top: 30px;
+    height: 30px;
+    padding: 0 15px 8px;
+    color: #0a2f73;
+}
+
+
+
+/* Line 1574 added by FJ. It will display nothing in between the screen size 0 and 513pixels (for 513 pixels as well)  */
+@media screen and (max-width: 890px) {
+  /* line 26, ../sass/modules/_menu-header.sass */
+ .body-header .middle.row{
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.body-header .label {
+    padding: 0 0 0 20px;
+    color: inherit;
+}
+.body-header .right .label.first {
+    padding: 0;
+    color: inherit;
+}
+.body-header .right .label.name {
+    padding: 0;
+}
+.body-header .name {
+    cursor: default;
+    color: inherit;
+    display: inline-table;
+    max-width: 300px;
+    position: relative;
+}
+.body-header .admin {
+    position: absolute; 
+    left: 0; 
+    top: 6px; 
+    z-index: 9;
+}
+.body-header .admin a {
+    color: #fff !important;
+}
+.header-menu .label a {
+    color: inherit;
+}
+.link {
+    color: inherit !important;
+}
+.link:hover {
+    color: inherit !important;
+}
+.hidden-popup {
+    display: none;
+}
+.hidden-popup .title {
+    margin-top: 6px;
+    padding-bottom: 6px;
+    width: auto;
+    font-weight: bold;
+    font-size: 16px !important;
+    line-height: 15px;
+    color: #0a2f73;
+}
+.hidden-popup .button-bar {
+    text-align: center;
+    width: auto;
+    bottom: 10px;
+    padding: 10px 0;
+}
+.hidden-popup .modal-message {
+    margin-top: 10px;
+    padding-top: 10px;
+    min-height: 70px;
+    border-top: 1px dashed #aecaea;
+}
+.login-container {
+    color: inherit;
+}

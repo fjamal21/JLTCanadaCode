@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <link href="../css/base.css" type="text/css" rel="stylesheet">
+
+    <script src="../lib/jquery/jquery-1.9.1.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            /* Outer section tabs */
+            $(".default.tabs li.parent").click(function() {
+                $(this).parent().find('li.parent').removeClass("active");
+                $(this).addClass("active");
+                var tabItemID = $(this).attr("data-tab-id");
+                $(".default.tabs .inner .active").removeClass("active");
+                $(".default.tabs .inner #"+tabItemID).addClass("active");
+
+                /* IF THERE IS INNER TAB INSIDE    start */
+                $(".default.tabs .child.tabs li.child:first-child").addClass("active");
+                $(".default.tabs .child.tabs .inner .container:first-child").addClass("active");
+                /* IF THERE IS INNER TAB INSIDE    end */
+            });
+
+            /* Inner section tabs */
+            $(".child.tabs li.child").click(function() {
+                $(this).parent().find('li.child').removeClass("active");
+                $(this).addClass("active");
+                var tabItemID = $(this).attr("data-tab-id");
+                $(".child.tabs .inner.space .active").removeClass("active");
+                $(".child.tabs .inner #"+tabItemID).addClass("active");
+            });
+
+            /* Dialog opens and closes by clicking at the bottom arrow icon */
+            $(".benefits.header .cost.calculator .dialog.arrow").click(function() {
+                if ( $(".benefits.header .cost.calculator .open").hasClass("show") ) {
+                    $(".benefits.header .cost.calculator .open").toggle();
+                }
+            });
+
+            /* Sets tick image icon near item to show that current step has been accomplished */
+            $(".default-body .benefits.header .inner.passed").prepend('<img src="../css/img/checked.png">')
+
+        });
+    </script>
+
+</head>
+
+<body>
+<div class="container">
+
+    <!--------------    HEADER  start    -------------->
+    <div class="default-header">
+
+        <div class="left">
+            <div class="middle row">
+                <div class="middle cell">
+                  <div ><img src="../css/img/logo-company.png"></div>  
+                   <div > 
+
+                        <!--  MENU   start  -->
+                        <ul class="menu">
+                            <li><div class="label first rounded"><a href="#">Support & Documentation</a></div>
+                                <ul class="sub-menu">
+                                    <img src="../css/img/popup-arrow.png" class="popup-arrow">
+                                    <a href="#"><li> <img src="../css/img/icon-tutorial.png"> <span class="item">Tutorial</span></li></a>
+                                    <a href="#"><li> <img src="../css/img/icon-workbook.png"> <span class="item">Plan Workbook</span></li></a>
+                                    <a href="#"><li> <img src="../css/img/icon-glossary.png"> <span class="item">Glossary</span></li></a>
+                                </ul>
+                            </li>
+                            <li><div class="label rounded"><a href="#">Contact</a></div></li>
+                        </ul>
+                        <!--  MENU   end  -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="middle row">
+                <div class="middle cell logout">
+                  <div >  
+                        <select>
+                            <option selected>English</option>
+                            <option>Armenian</option>
+                            <option>Russian</option>
+                        </select>
+                    </div>
+                    <span class="delimiter"></span>
+                    <span class="message">Welcome</span>
+                    <span class="name">John Smith</span>
+                    <div class="label"><a href="#">Logout</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------    HEADER  end    --------------    >
+
+    <!--------------    BODY  start    -------------->
+    <div class="default-body">
+        <div class="default tabs">
+            <ul class="parent">
+                <li class="parent active tab-title" data-tab-id="tab-ex1">Enrollment</li>
+                <li class="parent tab-title" data-tab-id="tab-ex2">Enroll Now</li>
+                <li class="parent tab-title" data-tab-id="tab-ex3">My Profile</li>
+            </ul>
+
+            <!--------------    INNER  start    -------------->
+            <div class="inner">
+                <div class="container child tabs active" id="tab-ex1">
+
+                    <!--------------    ENROLLMENT HOME TEMPLATE  start    -------------->
+                    <h1>Welcome to your Flexible Benefits Choices ...</h1>
+                    <h2>ENROLL NOW</h2>
+                    <p>Lorem ipsum dolor sit amet ctetur adipiscing elit. Donec pharetra risus eu justo vulputate pretium.</p>
+                    <p>n placerat tempus felis, vitae interdum enim laoreet nec. Donec pharetra risus eu justo vulputate pretium.</p>
+                    <input type="button" value="ENROLL NOW" class="button blue">
+                    <!--------------    ENROLLMENT HOME TEMPLATE  end    -------------->
+
+                </div>
+                <div class="container child tabs" id="tab-ex2">
+
+                    <!--------------    MY PROFILE TEMPLATE  start    -------------->
+                    <ul class="child">
+                        <li class="child active" data-tab-id="tab-ex4">Personal</li>
+                        <li class="child" data-tab-id="tab-ex5">Dependents</li>
+                    </ul>
+                    <div class="inner space">
+                        <div class="container active" id="tab-ex4">
+
+                            <!-----    PERSONAL TAB    start    ----->
+                            <h3>John smith</h3>
+                            <!-- SECTION ONE start -->
+                            <div class="section">
+                                <div class="row">
+                                    <div class="inner">Birth date: <span class="strong">08/25/1965</span></div>
+                                    <div class="inner">Gender: <span class="strong">Male</span></div>
+                                    <div class="inner">Hire date: <span class="strong">07/05/2013</span></div>
+                                    <div class="inner">Division: <span class="strong">Main Division</span></div>
+                                </div>
+                                <div class="row">
+                                    <div class="label medium">Language Preference:</div>
+                                    <div class="element">
+                                        <div >   
+                                            <select>
+                                                <option selected>English</option>
+                                                <option>Armenian</option>
+                                                <option>Russian</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="label medium">Are you a smoker?</div>
+                                    <div class="element">
+                                        <div >  
+                                            <select>
+                                                <option selected>No</option>
+                                                <option>Yes</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SECTION ONE end -->
+
+                            <!-- SECTION TWO start -->
+                            <div class="section header">Address</div>
+                            <div class="section">
+
+                                <div class="column initial">
+                                    <div class="row">
+                                        <div class="label small">Street:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="label small"></div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="label small">State/Province:</div>
+                                        <div class="element">
+                                            <div> 
+                                                <select>
+                                                    <option selected>Ontario</option>
+                                                    <option>Others</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="row">
+                                        <div class="label small">City:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="label small">Zip/Postal Code:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="label large note">If you changed state/province of residence please enter effective date:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- SECTION TWO end -->
+
+                            <!-- SECTION THREE start -->
+                            <div class="section header">Phone Info</div>
+                            <div class="section">
+
+                                <div class="column initial">
+                                    <div class="row">
+                                        <div class="label medium">Home Phone Number:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="label medium">Cell Phone Number:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="row">
+                                        <div class="label extra-medium">Emergency Contact Name:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="label extra-medium">Emergency Contact Number:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- SECTION THREE end -->
+
+                            <!-- SECTION FOUR start -->
+                            <div class="section header">Banking Info (Optional)</div>
+                            <div class="section">
+                                <p>Direct Deposit for claims reimbursement</p>
+
+                                <div class="column initial">
+                                    <div class="row">
+                                        <div class="label medium">Bank Account Number:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="label medium">Branch Transit Number:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="label medium link">
+                                            <div class="info-inner"></div>
+                                            <a href="#">View Sample Check</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="column">
+                                    <div class="row">
+                                        <div class="label medium">Bank Transit Number:</div>
+                                        <div class="element">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- SECTION FOUR end -->
+
+                            <div class="submit row buttons">
+                                <input type="button" value="Save & Continue" class="button gray right">
+                            </div>
+                            <!-----    PERSONAL TAB    end    ----->
+
+                        </div>
+                        <div class="container" id="tab-ex5">
+
+                            <!-----    DEPENDENTS TAB    start    ----->
+                            Dependents tab
+                            <!-----    DEPENDENTS TAB    end    ----->
+
+                        </div>
+                    </div>
+                    <!--------------    MY PROFILE TEMPLATE  end    -------------->
+
+                </div>
+                <div class="container child tabs" id="tab-ex3">
+                    <!--------------    MY PROFILE TEMPLATE  start    -------------->
+                    My Profile
+                    <!--------------    MY PROFILE TEMPLATE  end    -------------->
+                </div>
+
+            </div>
+            <!--------------    INNER  end    -------------->
+        </div>
+    </div>
+    <!--------------    BODY  end    -------------->
+
+</div>
+</body>
+</html>

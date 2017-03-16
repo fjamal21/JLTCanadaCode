@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<title class="no-display no-display-SL">BenPal Flexible Benefits</title>
+<link rel="icon" href="css/themes/BenPal/img/favicon.ico" type="image/x-icon" class="no-display no-display-SL">
+<link rel="stylesheet" href="css/boilerplate.css">
+<link rel="stylesheet" href="css/login.css" type="text/css" >
+<link rel="stylesheet" href="css/base.css" type="text/css">
+<link rel="stylesheet" href="css/zebradefault.css" type="text/css">
+
+</head>
+<body>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0;URL=templates/javascript_disabled.html">
+</noscript>
+<!-- Disabled the next line so that the noscript will work however not sure of the
+     long term consequences of this.  Seems to work fine but should test thoroughly -->
+<!-- style>html {display:none;}</style -->
+<script>if (self == top) {
+        document.documentElement.style.display = 'block';
+    } else {
+        top.location = self.location;
+    }
+</script>
+
+<div class="container" /* style="overflow-y: auto" */>
+    <!-- ko template: {name: 'header', data: header} --><!-- /ko -->
+    <!-- ko template: 'login' --><!-- /ko -->
+</div>
+
+<!--[if lt IE 9]><script type="text/javascript">window.legacyIE = true;</script><![endif]-->
+<script type="text/javascript" src="js/require_config.DEBUG.js"  ></script>
+<script type="text/javascript" src="lib/require.js" data-main="../login.html"></script>
+
+<ul class="header-sub-menu hidden-popup" id="headerPopup">
+    <img src="css/img/popup-arrow.png" class="popup-arrow">
+    <a href="../../v3/help">
+    <li class="word-break">
+        <span class="item-click">
+            <img src="css/img/icon-tutorial.png" class="icon"> <span class="item"><!-- ko i18n: 'header.tutorial' --><!-- /ko --></span>
+        </span>
+    </li>
+    </a>
+    <a href="#">
+    <li class="word-break">
+        <span class="item-click">
+            <img src="css/img/icon-workbook.png" class="icon"> <span class="item"><!-- ko i18n: 'header.planWorkbook' --><!-- /ko --></span>
+        </span>
+    </li>
+    </a>
+    <a href="#">
+    <li class="word-break">
+        <span class="item-click">
+            <img src="css/img/icon-glossary.png" class="icon"> <span class="item"><!-- ko i18n: 'header.glossary' --><!-- /ko --></span>
+        </span>
+    </li>
+    </a>
+    <a href="#">
+    <li class="word-break">
+        <span class="item-click">
+            <img src="css/img/icon-faq.png" class="icon"> <span class="item"><!-- ko i18n: 'header.faq' --><!-- /ko --></span>
+        </span>
+    </li>
+    </a>
+</ul>
+
+</body>
+</html>

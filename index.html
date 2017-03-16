@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<title class="no-display no-display-SL">BenPal Flexible Benefits</title>
+<title class="no-display no-display-BP">Standard Life Flexible Benefits</title>
+
+<link rel="icon" href="css/themes/BenPal/img/favicon.ico" type="image/x-icon" class="no-display no-display-SL">
+<link rel="icon" href="css/themes/StandardLife/img/favicon.ico" type="image/x-icon" class="no-display no-display-BP">
+<link rel="stylesheet" href="css/boilerplate.css">
+<link rel="stylesheet" href="css/base.css" type="text/css">
+<link rel="stylesheet" href="css/zebradefault.css" type="text/css">
+<link rel="stylesheet" href="css/jquery-ui/jquery-ui-1.10.3.custom.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<noscript>
+    <META HTTP-EQUIV="Refresh" CONTENT="0;URL=templates/javascript_disabled.html">
+</noscript>
+<!-- Disabled the next line so that the noscript will work however not sure of the
+     long term consequences of this.  Seems to work fine but should test thoroughly -->
+<!-- style>html {display:none;}</style -->
+<script>if (self == top) {
+        document.documentElement.style.display = 'block';
+    } else {
+        top.location = self.location;
+    }
+</script>
+<div class="container">
+<!-- ko if: isLoggedIn() -->
+<!-- ko template: {name: 'header', data: header} --><!-- /ko -->
+<!-- ko template: {name: 'contentController'} --><!-- /ko -->
+<!-- ko template: 'footer' --><!-- /ko -->
+<!-- /ko -->
+
+</div>
+
+<!-- Pop-ups -->
+<div id="discontinue-popup" class="hidden-popup">
+    <div class="title word-break"><!-- ko i18n: 'dependents.discontinue.confirm' --><!-- /ko --></div>
+    <div class="clear modal-message"><!-- ko i18n: 'dependents.discontinue.message' --><!-- /ko --> <!-- ko text: firstName --><!-- /ko --> <!-- ko text: lastName --><!-- /ko --></div>
+    <div class="button-bar clear">
+        <input type="button" class="button back bar" data-popup="cancel" data-bind="value: i18n('no')">
+        <input type="button" class="button primary" data-popup="submit" data-bind="value: i18n('yes')" /* style="color: #fff !important" */>
+    </div>
+</div>
+<div id="warning-popup" class="hidden-popup">
+    <div class="title"><!-- ko text: title --><!-- /ko --></div>
+        <div class="clear modal-message"><!-- ko text: message --><!-- /ko --></div>
+        <div class="button-bar clear">
+            <input type="button" class="button back bar" data-popup="cancel" data-bind="value: i18n('cancel')">
+            <input type="button" class="button primary" data-popup="submit" data-bind="value: i18n('continue')" /* style="color: #fff !important" */>
+        </div>
+    </div>
+<div id="error-popup" class="hidden-popup">
+        <div class="title" data-bind="html: title"></div>
+        <div class="clear modal-message" data-bind="html: message"></div>
+        <div class="button-bar clear">
+        <input type="button" class="button back bar" data-popup="cancel" data-bind="value: i18n('back')">
+    </div>
+</div>
+<div id="error-popup" class="hidden-popup">
+    <div class="title word-break"><!-- ko text: title --><!-- /ko --></div>
+    <div class="clear modal-message"><!-- ko text: message --><!-- /ko --></div>
+    <div class="button-bar clear">
+        <input type="button" class="button back bar" data-popup="cancel" data-bind="value: i18n('back')">
+    </div>
+</div>
+<div id="removeCostScenario-popup" class="hidden-popup">
+    <div class="title word-break"><!-- ko i18n: 'scenario.removing.confirm' --><!-- /ko --></div>
+    <div class="clear modal-message"><!-- ko i18n: 'scenario.removeScenario.confirmMsg' --><!-- /ko -->?</div>
+    <div class="button-bar clear">
+        <input type="button" class="button back bar" data-popup="cancel" data-bind="value: i18n('no')">
+        <input type="button" class="button primary" data-popup="submit" data-bind="value: i18n('yes')" /* style="color: #fff !important" */>
+    </div>
+</div>
+<ul class="header-sub-menu hidden-popup header-support-menu" id="headerPopup">
+    <img src="css/img/popup-arrow.png" class="popup-arrow">
+    <li class="word-break"> 
+        <a href="#tutorials" class="tutorial">
+            <!-- ko i18n: 'header.tutorial' --><!-- /ko -->
+        </a>
+    </li>
+    <li class="word-break" data-bind="visible: vm.home.workbookLink()">
+        <a data-bind="attr: { href: vm.home.workbookLink()}" target="_blank" class="workbook">
+            <!-- ko i18n: 'header.planWorkbook' --><!-- /ko -->
+        </a>
+    </li>
+    <li class="word-break"> 
+        <a data-bind="attr: { href: vm.home.glossaryLink()}" target="_blank" class="glossary">
+            <!-- ko i18n: 'header.glossary' --><!-- /ko -->
+        </a>
+    </li>
+    <!--li class="word-break">
+        <a href="../../v3/help" class="faq">
+            <!-- ko i18n: 'header.faq' --><!-- /ko -->
+        <!--/a>
+    </li -->
+</ul>
+
+<div id="history-popup" class="hidden-popup">
+    <div class="title word-break"><!-- ko text: title --><!-- /ko --></div>
+    <div class="row scenario">
+        <!-- ko if: costScenarios() -->
+        <div class="section header first">
+            <div class="inter"><!-- ko i18n: 'scenario.summary' --><!-- /ko --></div>
+        </div>
+
+        <div class="section">
+            <div class="inter">
+                <!-- ko template: {name: 'scenarios-header'} --><!-- /ko -->
+                <!-- ko template: {name: 'scenarios-grid'} --><!-- /ko -->
+                <!-- ko template: {name: 'scenarios-footer'} --><!-- /ko -->
+            </div>
+        </div>
+        <!-- /ko -->
+        <!-- ko ifnot: costScenarios() -->
+        Loading...
+        <!-- /ko -->
+    </div>
+</div>
+
+<div id="info-popup" class="hidden-popup">
+    <div class="title word-break" data-bind="text: title"></div>
+    <div class="clear modal-message" data-bind="html: message"></div>
+</div>
+
+
+<!--[if lt IE 9]><script type="text/javascript">window.legacyIE = true;</script><![endif]-->
+<script type="text/javascript" src="js/require_config.DEBUG.js"></script>
+<script type="text/javascript" src="lib/require.js" data-main="../index.html"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+body {
+    overflow: hidden;
+}
+.login-container {
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+    height: inherit;
+}
+.login-container .content {
+    float: left;
+}
+.login.delimiter {
+    margin: 0 0 0 20px;
+}
+.login {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    top: 100px;
+    vertical-align: middle;
+    min-height: 560px;
+}
+.login .greeting {
+    font-style: normal;
+    font-size: 26px;
+    text-align: left;
+}
+.login .greeting.small {
+    font-size: 18px;
+    font-weight: bold;
+}
+.login .information {
+    display: inline-block;
+    overflow: hidden;
+    padding: 10px 40px 20px 40px;
+    background-color: #f4faff;
+    margin: 0 auto;
+    box-shadow: 0 2px 3px #CCCCCC;
+    -moz-box-shadow: 0 2px 3px #CCCCCC;
+    -webkit-box-shadow: 0 2px 3px #CCCCCC;
+    min-width: 450px;
+}
+.login .warning {
+    font-weight: bold;
+    color: red;
+}
+.login .middle.cell {
+    color: inherit;
+    text-align: left;
+}
+.login .value {
+    min-height: 35px;
+}
+.login .value .option {
+    margin-right: 40px;
+}
+.login .value .info{
+    margin-left: 5px;
+}
+.login .required.fields, .login .question.fields {
+    position: relative;
+    text-align: left;
+    margin: 0 auto !important;
+    font-size: inherit;
+}
+.login .required.fields {
+    margin-top: -10px !important;
+    padding-bottom: 20px;
+}
+.login .question.fields {
+    padding-top: 30px;
+    font-size: 24px;
+}
+.login .password.rules {
+    font-size: 12px;
+    padding: 5px 10px;
+    position: relative;
+    text-align: left;    
+    margin-top: 20px !important;
+}
+.login .password.rules .title {
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+}
+.login .form {
+    /*padding-top: 20px;*/
+    float: left;
+}
+.login .form .question div {
+    display: inline-block;
+}
+.login .form .row {
+    clear: both;
+    margin: 10px 0 0 0;
+}
+.login .form .row.inputs {
+    float: left;
+}
+.login .form .row:last-child {
+    margin: 0;
+}
+.login .security {
+    position: relative;
+}
+.login .security.header {
+    bottom: 15px;
+}
+.login .security.warning {
+    bottom: 30px;
+}
+.login .form .row.forgotten-questions:last-child {
+    margin-top: 10px;
+}
+.login .form input[type='text'], .login .form input[type='password'] {
+    width: auto;
+}
+.login .form .left {
+    display: inline-block;
+    width: auto;
+    text-align: right;
+}
+.login .form .right {
+    display: inline-block;
+    width: auto;
+    text-align: left;
+    padding: 0 0 0 20px;
+}
+.login .form .left.change {
+    width: auto;
+}
+.login .form .left.forgotten {
+    width: auto;
+}
+.login .form .forgot, .login .form .error {
+    margin: 5px 0 0 0;
+    text-align: right;
+    display: table;
+    width: auto;  /*rajesh mp2 300px */
+    float: right;
+}
+.login .form .row.error-container {
+    height: 30px;
+    position: relative;
+    top: 15px;
+}
+.login .form .reset-password {
+    height: 25px;
+}
+.login .form .reset-password .error {
+    text-align: left;
+}
+.login .form .forgot a {
+    font-size: 12px;
+    color: inherit;
+}
+.login .form .button {
+    margin-top: 20px;
+}
+.login .label {
+    font-size: inherit;
+    color: inherit;
+}
+.login .content {
+    display: inline-block;
+}
+.login .content .approve {
+    padding-top: 10px;
+}
+.login .content .left {
+    text-align: left;
+}
+.login .content .right {
+    text-align: right;
+}
+.login .asterisk {
+    color: #ff0000 !important;
+    margin-right: 0;
+    right: 0;
+}
+.login .middle-container {
+    padding:0 14px;
+}

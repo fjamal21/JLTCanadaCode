@@ -1,0 +1,50 @@
+/* ===============================================================
+    OVERWRITING JQUERY UI DEFAULT STYLING
+=============================================================== */
+.ui-widget, .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-size: inherit !important;
+    font-family: inherit !important;
+    color: inherit !important;
+}
+.ui-widget-content {
+    background: #FFF !important;
+}
+.ui-dialog {
+    -moz-box-shadow: 4px 5px 8px 2px #888;
+    -webkit-box-shadow: 4px 5px 8px 2px #888;
+    box-shadow: 4px 5px 8px 2px #888;
+}
+div.ui-dialog {
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+    border-radius: 8px !important;
+}
+.ui-dialog .ui-dialog-title {
+    height: 0px !important;
+}
+.ui-dialog .ui-dialog-titlebar {
+    padding: 0 !important;
+}
+.ui-widget-header {
+    background: #FFF !important;
+    border: 0 !important;
+}
+.ui-state-default .ui-icon {
+    background-image: url("../css/img/icon-close.png") !important;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    border: 0 !important;
+    background: none !important;
+}
+.ui-icon-closethick {
+    background-position: 0 0 !important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+    margin-top: 0px !important;
+    z-index: 1 !important;
+}
+.ui-corner-all {
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}

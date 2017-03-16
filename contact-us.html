@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<!-- title>BenPal Flexible Benefits</title -->
+<title>DEV Standard Life Flexible Benefits</title>
+
+<!-- link rel="icon" href="css/themes/BenPal/img/favicon.ico" type="image/x-icon" -->
+<link rel="icon" href="css/themes/StandardLife/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/boilerplate.css">
+<link rel="stylesheet" href="css/login.css" type="text/css" >
+<link rel="stylesheet" href="css/base.css" type="text/css">
+<link rel="stylesheet" href="css/zebradefault.css" type="text/css">
+
+</head>
+<body>
+
+<div class="container" /* style="overflow-y: auto" */>
+    <div class="body-header">
+        <div class="login-container">
+            <div class="menu">
+                <div class="middle row">
+                    <div class="middle cell">
+                        <div class="section-one">
+                            <span class="label"><a href="./login.html" class="link"><!-- ko i18n:'login' --><!-- /ko --></a></span>
+                            <span class="label">
+                                <div class="header dropdown">
+                                    <select data-bind="value: locale.selected_locale" class="auto">
+                                        <option value="en-CA"><!-- ko i18n:'english' --><!-- /ko --></option>
+                                        <option value="fr-CA"><!-- ko i18n:'french' --><!-- /ko --></option>
+                                    </select>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="left">
+                <div class="middle row">
+                    <div class="middle cell logo">
+                        <div class="header-logo">
+                            <a href="#" target="_blank"><div class="logo-company-header"></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+    </div>
+    <!-- ko template: 'contact-us' --><!-- /ko -->
+</div>
+
+<!--[if lt IE 9]><script type="text/javascript">window.legacyIE = true;</script><![endif]-->
+<script type="text/javascript" src="js/require_config.DEBUG.js"></script>
+<script type="text/javascript" src="lib/require.js" data-main="../login.html"></script>
+
+<ul class="header-sub-menu hidden-popup" id="headerPopup">
+    <img src="css/img/popup-arrow.png" class="popup-arrow">
+    <a href="../../v3/help">
+    <li class="word-break">
+        <span class="item-click">
+            <img src="css/img/icon-tutorial.png" class="icon"> <span class="item"><!-- ko i18n: 'header.tutorial' --><!-- /ko --></span>
+        </span>
+    </li>
+    </a>
+    <a href="#">
+    <li class="word-break">
+        <span class="item-click">
+            <img src="css/img/icon-workbook.png" class="icon"> <span class="item"><!-- ko i18n: 'header.planWorkbook' --><!-- /ko --></span>
+        </span>
+    </li>
+    </a>
+    <a href="#">
+    <li class="word-break">
+        <span class="item-click">
+            <img src="css/img/icon-glossary.png" class="icon"> <span class="item"><!-- ko i18n: 'header.glossary' --><!-- /ko --></span>
+        </span>
+    </li>
+    </a>
+    <a href="#">
+    <li class="word-break">
+        <span class="item-click">
+            <img src="css/img/icon-faq.png" class="icon"> <span class="item"><!-- ko i18n: 'header.faq' --><!-- /ko --></span>
+        </span>
+    </li>
+    </a>
+</ul>
+
+</body>
+</html>

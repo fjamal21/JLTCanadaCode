@@ -1,0 +1,779 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('font/helveticaneuece55roman.eot') format('eot'),
+         url('font/helveticaneuece55roman.eot?#iefix') format('embedded-opentype'),
+         url('font/helveticaneuece55roman.woff') format('woff'),
+         url('font/helveticaneuece55roman.ttf') format('truetype'),
+         url('font/helveticaneuece55roman.svg#helveticaneuece55roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+h1, h2 {
+    font-family: Calibri, Arial !important;
+    color: #003567 !important;
+}
+h2 {
+    font-size: 26px !important;
+}
+body, input, textarea, select, option, span, td, th, a, div {
+    font-size: 12px !important;
+    font-family: Arial;
+    color: #555 !important;
+}
+a {
+    color: #09C;
+}
+input[type="text"], input[type="password"], textarea, select, option {
+    color: #555;
+}
+body > div.container {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#wrap {
+    padding-bottom: 95px !important;
+    margin-top: -48px !important;
+}
+@media only screen and (max-device-width: 768px) {
+    .body-header span.label {
+        padding-left: 10px !important;
+    }
+}
+.button {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    font-weight: bold !important;
+    padding: 2px 18px 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    color: #fff !important;
+}
+.button.secondary, .button.secondary:active {
+    background: url(img/button-primary-bg-BenPal.png) repeat-x scroll 0 0;
+    background-color: #0359a6;
+    border: 1px solid #0359a6;
+    color: #fff !important;
+}
+.button {
+    padding: 0 10px 2px !important;
+}
+.button.secondary:hover {
+    background: url(img/button-primary-bg-BenPal.png) repeat-x scroll 0 -31px;
+}
+.enroll-now .button, .button.primary, .button.primary:active, .button.blue, .button.blue:active, .selected-row .button, .selected-row .button:active {
+    background: url(img/button-bg-BenPal.png) repeat-x scroll 0 0;
+    background-color: #74ad23;
+    border: 1px solid #669421;
+    color: #FFF;
+    font-size: 18px !important;
+}
+.enroll-now .button:hover, .button.primary:hover, .button.blue:hover, .selected-row .button:hover {
+    background: url(img/button-bg-BenPal.png) repeat-x scroll 0 -43px;
+    background-color: #74ad23;
+}
+.button.blue, .button.blue:active, .selected-row .button, .selected-row .button:active {
+    background: url(img/button-bg-BenPal.png) repeat-x scroll 0 0 !important;
+    background-color: #74ad23 !important;
+    border: 1px solid #669421 !important;
+}
+.button.blue:hover, .selected-row .button:hover {
+    background: url(img/button-bg-BenPal.png) repeat-x scroll 0 -43px !important;
+    background-color: #74ad23 !important;
+}
+.button.primary, .button.primary:active {
+    font-size: 14px !important;
+}
+.button.selected-btn, .button.selected-btn:active, .selected-row.alternative .button, .selected-row.alternative .button:active {
+    background: url(img/button-primary-bg-BenPal.png) repeat-x scroll 0 0;
+    background-color: #0359a6;
+    border: 1px solid #0359a6;
+    color: #FFF;
+}
+.button.selected-btn:hover, .selected-row.alternative .button:hover {
+    background: url(img/button-primary-bg-BenPal.png) repeat-x scroll 0 -31px;
+}
+.button.back, .button.back:active {
+    background: url(img/button-primary-bg-BenPal.png) repeat-x scroll 0 0;
+    background-color: #0359a6;
+    border: 1px solid #0359a6;
+    color: #FFF !important;
+}
+.button.back:hover {
+    background: url(img/button-primary-bg-BenPal.png) repeat-x scroll 0 -31px;
+}
+.enroll {
+    background:url(img/enroll-bg.png) no-repeat;
+    width: auto;
+    max-width: 1200px;
+    height: 378px;
+    margin: 20px auto;
+}
+
+/* Added part by FJ */
+/*
+div.micro {
+    background:url(img/enroll-bg.png) no-repeat; 
+    background-position: 50% 0;    /*Added part by FJ
+}
+*/
+
+.body-header .right {
+    
+}
+.button.logout {
+    background: url(img/icon-logout-BenPal.png) no-repeat scroll 5px 2px;
+    background-color: #fff;
+    border: 0;
+    color: #0099cc !important;
+}
+.login .form input[type="text"], .login .form input[type="password"] {
+    font-size: 12px !important;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+}
+.login-bg {
+    width: auto;
+    height: 70%;
+    position: absolute;
+    bottom: 37px;
+    
+    background: #edf1f4; /* Old browsers */
+    background: -moz-linear-gradient(top,  #edf1f4 0%, #f6f8f9 33%, #d8e2e7 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#edf1f4), color-stop(33%,#f6f8f9), color-stop(100%,#d8e2e7)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #edf1f4 0%,#f6f8f9 33%,#d8e2e7 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #edf1f4 0%,#f6f8f9 33%,#d8e2e7 100%); /* Opera 11.10+ */
+   background: -ms-linear-gradient(top,  #edf1f4 0%,#f6f8f9 33%,#d8e2e7 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #edf1f4 0%,#f6f8f9 33%,#d8e2e7 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#edf1f4', endColorstr='#d8e2e7',GradientType=0 ); /* IE6-9 */
+}
+.login-container {
+    z-index: 9;
+}
+.body-header {
+    background: #fff;
+    color: #FFF;
+    min-width: 630px;
+    min-width: 620px\9x; /* Only for IE */
+}
+.body-header .header.dropdown select {
+    background: none;
+    border: 0 !important;
+    color: #404064;
+    padding: 2px 18px 3px 2px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) { /* Only for Chrome */
+    .body-header .header.dropdown select {
+        padding-right: 35px !important;
+    }
+}
+.body-header .header.dropdown:after {
+    content: url('img/dropdown-body-arrow-header-BenPal.png');
+    margin: 1px 4px 1px 1px;
+}
+.body-header .arrow-menu {
+    background: url("img/arrow-header-BenPal.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.body-header option {
+    height: 22px;
+    line-height: 22px !important;
+    vertical-align: middle;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+
+
+
+.header-logo .logo-company-header {
+
+   background:url("img/logo-BenPal.png") no-repeat; 
+    width: 300px;
+    height: 80px;
+}
+
+
+
+
+
+
+
+.body-footer {
+    border-top: 0 !important;
+    height: 37px !important;
+    line-height: 37px !important;
+    background:url(img/bottom-bg.png) repeat-x;
+    bottom: 0 !important;
+}
+.body-footer .left {
+    bottom: 0 !important;
+}
+.body-footer .left .logo-company-footer {
+    background:url("img/logo-bottom-left-BenPal.png") no-repeat;
+    height: 18px;
+    width: 60px;
+    display: inline-block;
+    top: 4px;
+}
+.body-footer .left .logo {
+    min-width: 400px !important;
+}
+.body-footer .right .logo {
+    min-width: 200px !important;
+}
+.body-footer .left .label {
+    min-width: inherit !important;
+}
+.body-footer .label {
+    color: #ffffff !important;
+    line-height: 15px;
+    margin-left: -10px;
+    padding-left: 10px;
+    display: inline;
+    position: relative;
+}
+.body-footer .right .label {
+    bottom: 0;
+}
+.body-footer .right .label a {
+    color: inherit !important;
+}
+.body-footer .icon{
+    background: url(img/icon-footer.png) no-repeat;
+    width: auto;
+    height: 9px;
+    display: inline-block;
+    margin-left: 5px;
+}
+.login {
+    top: 110px !important;
+}
+.login .information {
+    border: 1px solid #F0F1F1;
+    background-color: #fff;
+    padding-top: 30px;
+    border-top: 0;
+    min-width: 60%;
+}
+.login .greeting {
+    color: #0A2F73;
+}
+.login .form .left {
+    color: #0a2f73;
+    text-align: left;
+}
+.login .form .row {
+    color: #0A2F73;
+}
+.login .form .row div, .login .form .row span {
+    color: inherit;
+}
+.login .form .right {
+    width: auto;
+}
+.login .password.rules {
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    position: relative;   
+}
+.login .password.rules .icon {
+    width:auto;
+    height: 21px;
+    background: url(img/icon-password-req.png) no-repeat;
+    display: inline-block;
+    margin-top:5px;
+}
+.no-display-BP {
+    display: none !important;
+}
+.section {
+    border-top: 0;
+    border-left: 1px solid #aecaea;
+    border-right: 1px solid #aecaea;
+    border-bottom: 1px solid #aecaea;
+
+    box-shadow: 0 2px 3px #CCCCCC !important;
+    -moz-box-shadow: 0 2px 3px #CCCCCC !important;
+    -webkit-box-shadow: 0 2px 3px #CCCCCC !important;
+
+    background-color: #fff;
+}
+.benefits.header div.costs.section {
+    background-color: transparent;
+    display: table-cell;
+}
+.benefits.header div.costs.section.odd {
+    min-height: 60px;
+    vertical-align: top;
+}
+.benefits.header .costs.section div.one, .benefits.header .costs.section div.two {
+    min-width: 50px;
+}
+.section .label.large.note {
+    width: auto;
+}
+.section.header.main .inter {
+    color: #fff !important;
+}
+.default.tabs .inner .active, .default.tabs ul.parent:first-child li.parent.active { /* Tabs background color and active tab background color */
+    background: #ffffff; /* Old browsers */
+    /*background: -moz-linear-gradient(top, #ffffff 0%, #beced4 100%); 
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#beced4)); 
+    background: -webkit-linear-gradient(top, #ffffff 0%,#beced4 100%); 
+    background: -o-linear-gradient(top, #ffffff 0%,#beced4 100%); 
+    background: -ms-linear-gradient(top, #ffffff 0%,#beced4 100%); 
+    background: linear-gradient(to bottom, #ffffff 0%,#beced4 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#beced4',GradientType=0 ); */
+}
+.body-header .menu {
+    top: 30px !important;
+}
+.section.header.first {
+    margin-top: 20px !important;
+}
+.default-body .section.header {
+    background: url("img/section-bg-BenPal.png") repeat-x scroll 0 0 #0359a6 !important;
+    border: 1px solid #bfbfbf !important;
+    box-shadow: none !important;
+    top: 0 !important;
+    margin-top: 40px !important;
+}
+.default-body .section.header .inter {
+    color: #fff !important;
+}
+.default-body .section.header span {
+    color: #fff !important;
+    font-size: 16px !important;
+}
+.default-body .section.header.main {
+    background-color: #3B598E !important;
+    color: #fff !important;
+}
+.default-body .section.header.main .inter {
+    color: #fff !important;
+}
+.section-icon {
+    background: url(img/icon-password-req.png) no-repeat;
+    width: auto;
+    height: 21px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+}
+.body-footer .right .logo .sep {
+    color: #fff !important;
+    padding: 0 5px;
+}
+.border-dotted {
+    border-bottom: 1px dotted #CCCCCC;
+    padding-bottom: 6px;
+}
+.man-container {
+    min-width: 153px;
+}
+.man-container {
+    float: left;
+    margin-bottom: 0;
+    position: relative;
+    text-align: left;
+    padding-left: 30px;
+}
+.call-us {
+    display: table;
+    float: left; 
+    height: 90px;
+    margin-left: 15px;
+    margin-top: 18px;    
+    position: relative;
+    text-align: left;
+}
+.man-container .man {
+    display: inline-block;
+}
+.man-container .man.one {
+    background: url(img/login-man-1.png) no-repeat;
+    width: auto;
+    height: 374px;
+}
+.man-container .man.two {
+    background: url(img/login-man-2.png) no-repeat;
+    width: auto;
+    height: 237px;
+}
+.man-container .man.three {
+    background: url(img/login-man-3.png) no-repeat;
+    width: auto;
+    height: 229px;
+}
+.call-us .left {
+    bottom: 0;
+    display: table-cell;
+    vertical-align: bottom;
+    width: auto;
+    font-weight: bold;
+}
+.call-us .left h3 {
+    color: #0A2F73;
+    font-weight: inherit;
+    line-height: 25px;
+}
+.call-us .right {
+    background: url(img/call-us.png) no-repeat;
+    height: 53px;
+    margin-left: 10px;
+    margin-top: 80%;
+    position: relative;
+    width: auto;
+}
+.flex {
+    display: flex !important;
+}
+.selected-row {
+    background-color: #dbefb1 !important;
+}
+.selected-row td, .selected-row div, .selected-row select, .selected-row span {
+    color: #0b710c !important;
+}
+.benefits .dental .checked, .scenario .checked {
+    background: url("img/checked-blue.png") !important;
+    right: 10px;
+    top: 40%;
+}
+.icon-calculator {
+    width: auto;
+    height: 26px;
+    background:url(img/calculator.png) no-repeat;
+    display: inline-block;
+    padding-right: 10px;
+    position: relative;
+    top: 5px;
+}
+.congratulations .col, .summary .col {
+    color: #fff;
+}
+.row.approve {
+    position: relative;
+    top: 10px;
+    display: table;
+    width: auto;
+}
+div.enroll .box {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 0;
+    margin: 20px 0 0 100px;
+    width: auto;
+}
+.enroll h1.title {
+    padding: 15px 0 0 100px;
+}
+a.link {
+    color: #007bc3 !important;
+}
+div.default.tabs ul.child:first-child {
+    background-color: #6f7992;
+    display: table;
+    width: auto;
+}
+.default.tabs ul.child:first-child li.active.child {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.default.tabs ul.child:first-child li.child.active {
+    background: url() !important;
+}
+.default.tabs ul.child:first-child li.child, .default.tabs ul.child:first-child li.child.active {
+    border-left: 3px solid #fff !important;
+    display: table-cell;
+    position: relative;
+}
+.default.tabs ul.child:first-child li.child span {
+    color: #fff !important;
+}
+.default.tabs ul.child:first-child li.active.child span {
+    color: #182e5b !important;
+}
+.benefits.header .inner.disabled span, div.default.tabs ul.child:first-child li.child.disabled {
+    color: #fff !important;
+    background-color: #BCBCCC;
+    font-weight: normal;
+}
+.benefits.header .inner.current span {
+    color: #fff !important;
+}
+div.default.tabs ul.child:first-child li.child.active {
+    color: #0b710c !important;
+    background-color: #dbefb1 !important;
+}
+.benefits.header .inner.passed span, div.default.tabs ul.child:first-child li.child.passed {
+    color: #fff !important;
+}
+.benefits.header .cost.calculator div.header {
+    font-size: 16px !important;
+}
+.benefits.header div.cost.calculator {
+    background-color: #eeeeee;
+    border: 0;
+    box-shadow: 0 1px 3px #cccccc;
+}
+.benefits.header .cost.calculator div.arrow {
+    border: 0;
+    box-shadow: none;
+}
+.benefits.header .cost.calculator div.arrow.on {
+    background: url("img/cost-calculator-arrow-open.png") no-repeat;
+    background-size: 30px;
+}
+.benefits.header .cost.calculator div.arrow.off {
+    background: url("img/cost-calculator-arrow-close.png") no-repeat;
+    background-size: 30px;
+}
+.benefits.header .section p, .col1 > span {
+    line-height: 1.5em;
+}
+.benefits .dental td {
+    position: relative;
+}
+.benefits .dental td.requested-cov {
+    background-color: #bbde73 !important;
+}
+.benefits .dental td.approved-cov {
+    background-color: #9CCC37 !important;
+}
+ul.folders li {
+    font-weight: normal;
+}
+ul.folders li.selected, ul.folders li:hover {
+    border-top-left-radius: 0;
+    -moz-border-top-left-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -moz-border-top-right-radius: 0;
+    -webkit-border-top-right-radius: 0;
+}
+ul.folders li:hover {
+    color: #24356F !important;
+}
+div.microsite {
+    width: 100%;
+    padding-left: 60px;
+}
+
+
+div.micro {
+    background:url(img/enroll-bg.png) no-repeat; 
+    background-position: 50% 0;    
+}
+
+  
+@media screen and (max-width: 824px)
+{
+div.micro {
+    background:url(img/Splash-page-background-image.png) no-repeat; 
+    
+
+
+}
+
+}
+
+
+
+
+
+
+
+div.microsite .block {
+    height: 10px;
+    /*  width: auto;    Changed by FJ */ 
+    /*  170 px to 10 px Changed by FJ */ 
+
+
+    border: 1px solid #aecaea;
+    box-shadow: 0 2px 3px #CCCCCC !important;
+    -moz-box-shadow: 0 2px 3px #CCCCCC !important;
+    -webkit-box-shadow: 0 2px 3px #CCCCCC !important;
+}
+
+
+@media screen and (max-width: 513px)
+{
+div.microsite .block {
+background-color:#92C11E;
+min-height: 1px;
+}
+
+} 
+
+
+
+
+
+
+
+
+@media only screen and (max-device-width: 768px) {
+    div.microsite .block {
+        width: auto;
+    } 
+}
+div.microsite h3.title {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+div.microsite .view {
+    font-size: 1.4em !important;
+    border-top: 0;
+}
+
+
+
+@media screen and (max-width: 513px)
+{
+div.microsite .view {
+    display:none;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+div.microsite p {
+    line-height: 1.5em;
+}
+
+
+
+@media screen and (max-width: 513px)
+{
+div.microsite p {
+    display:none;
+}
+}
+
+
+
+
+
+@media
+
+.microsite .block, .microsite .secondary div.section {
+    background: #fff;
+}
+div.life-events-splash.micro-life {
+    background: url(img/mother_baby.jpg) no-repeat scroll 0 0;
+    background-position: right;
+}
+.congratulations div.print, .summary div.print {
+    background-color: #92be1f;
+    color: #fff !important;
+}
+.congratulations div.download-icon {
+    background: url("img/icon-download.png") no-repeat;
+}
+.section.single li {
+    line-height: 20px;
+}
+.default.tabs .child.tabs .inner {
+    padding-top: 10px;
+}
+.body-footer div.left, .body-footer div.right {
+    width: auto;
+}
+.life-events-splash.micro-life div.inner-section {
+    width: auto;
+}
+.benefits.header .inner.subtitle {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 29px;
+    margin-left: 4px;
+    border-top: 1px solid #cee0f2 !important;
+    border-left: 1px solid #cee0f2 !important;
+    border-right: 1px solid #cee0f2 !important;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: #eeeeee; 
+    position: relative;
+    top: 1px;
+}
+.benefits.header .inner.subtitle span {
+    color: #0b710c !important;
+    position: relative;
+    top: 3px;
+    font-weight: bold;
+}
+.benefits.header .inner.current.subtitle span, .benefits.header .inner.passed.subtitle span {
+    color: #274984 !important;
+}
+.benefits.header .inner.passed.subtitle img {
+    display: none;
+}
+.benefits.header .inner.current.subtitle {
+    background: #fff;
+}
+.section.inter.life-section, .section.congratulations, .my-life-events .inter, .my-life-events .life-note {
+    border-top: 1px solid #aecaea;
+}
+.show-status {
+    color: #fff !important;
+    font-weight: bold;
+}
+.unapproved td, .unapproved td span {
+    background-color: #e4f0e7;
+    color: #ff0000 !important;
+    font-weight: bold;
+}
+.default.tabs ul.child li.child.active .circle-status, .default.tabs ul.child li.child .circle-status {
+    width: auto;
+    height: 16px;
+    position: absolute;
+    z-index: 1;
+    bottom: -8px;
+    left: 48%;
+}
+.default.tabs ul.child li.child.passed .circle-status {
+    background: url("img/circle-active.png") no-repeat;
+}
+.default.tabs ul.child li.child.active .circle-status {
+    background: url("img/circle-inactive.png") no-repeat;
+}
+.default.tabs ul.child li.child.disabled .circle-status {
+    background: url("img/circle-disabled.png") no-repeat;
+}
+
+.micro div.cont {
+/*    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5); */
+    float: left;
+    margin: 0 auto 0 10px;
+    padding-left: 10px;
+    width: auto;
+}
+
+
+@media screen and (max-width: 513px)
+{
+.micro div.cont {
+/*    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.5); */
+   /*float:left; */
+   width: 70%;     
+}
+}
+
+
+
